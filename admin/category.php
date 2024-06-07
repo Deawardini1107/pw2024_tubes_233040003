@@ -104,12 +104,12 @@ if (
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">List Tempat Wisata</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">List Catogory</h6>
                         </div>
                         <div class="card-body">
-                            <!-- Add New Place Button -->
+                            <!-- Add Category Button -->
                             <div class="container-fluid">
-                                <button class="btn btn-success mb-4" data-toggle="modal" data-target="#addPlaceModal">Add New Place</button>
+                                <button class="btn btn-success mb-4" data-toggle="modal" data-target="#addPlaceModal">Add Category</button>
                             </div>
 
                             <div class="table-responsive">
@@ -148,12 +148,12 @@ if (
     </div>
     <!-- End of Page Wrapper -->
 
-    <!-- Add New Place Modal -->
+    <!-- Add Category Modal -->
     <div class="modal fade" id="addPlaceModal" tabindex="-1" role="dialog" aria-labelledby="addPlaceModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addPlaceModalLabel">Add New Place</h5>
+                    <h5 class="modal-title" id="addPlaceModalLabel">Add Category</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
