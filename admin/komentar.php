@@ -127,9 +127,9 @@ if (
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Content</th>
+                                            <th>Komentar</th>
                                             <th>User</th>
-                                            <th>Place</th>
+                                            <th>Tempat</th>
                                             <th>Created At</th>
                                         </tr>
                                     </thead>

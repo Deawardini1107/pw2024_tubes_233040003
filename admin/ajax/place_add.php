@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $place->description = $_POST['description'];
     $place->city = $_POST['city'];
     $place->category_id = $_POST['category_id'];
-    $place->admin_id = $_SESSION['admin_id']; // Assuming you have the admin_id stored in session
+    $place->admin_id = $_SESSION['user_id']; 
 
     // Handle file upload with a unique name
     if (!empty($_FILES['photos']['name'])) {

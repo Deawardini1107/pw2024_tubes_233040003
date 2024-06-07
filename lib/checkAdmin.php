@@ -2,6 +2,6 @@
 
 session_start();
 if($_SESSION['role'] != 'admin') {
-    header('Location: /paradise/index.php');
+    header('Location: /pw2024_tubes_233040003/index.php');
     exit;
 }

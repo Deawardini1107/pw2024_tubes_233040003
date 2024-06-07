@@ -7,6 +7,6 @@ $_SESSION = array();
 session_destroy();
 
 // Redirect to home page or login page
-header("Location: /paradise/index.php");
+header("Location: /pw2024_tubes_233040003/index.php");
 exit;
 ?>

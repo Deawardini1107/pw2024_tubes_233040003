@@ -175,7 +175,7 @@ session_start();
                         <div class="simple-slick-carousel dots-nav">
                             <?php
                             // Menggunakan Eloquent untuk mengambil data tempat, kategori, dan pengguna yang terkait
-                            $places = \Models\Place::select('places.id', 'places.name', 'places.description', 'places.city', 'categories.name AS category_name', 'users.username AS admin_username')
+                            $places = \Models\Place::select('places.id', 'places.name', 'places.description', 'places.city','places.photos','categories.name AS category_name', 'users.username AS admin_username')
                                 ->join('categories', 'places.category_id', '=', 'categories.id')
                                 ->join('users', 'places.admin_id', '=', 'users.id')
                                 ->get();
@@ -186,10 +186,8 @@ session_start();
                                 <div class="carousel-item">
                                     <a href="place-detail.php?placeid=<?= $place->id ?>" class="listing-item-container compact">
                                         <div class="listing-item">
-                                            <img src="assets/images/listing-item-01.jpg" alt="">
+                                            <img src="<?=$place->photos?>" alt="">
                                             <div class="listing-item-content">
-                                                <!-- Jika Anda memiliki rating yang bisa diambil dari database, Anda dapat menambahkannya di sini -->
-                                                <!-- <div class="numerical-rating" data-rating="3.5"></div> -->
                                                 <h3><?= $place->name ?> <i class="verified-icon"></i></h3>
                                                 <span><?= $place->city ?></span>
                                             </div>

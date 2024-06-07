@@ -403,10 +403,13 @@ if (
             // Handle add form submit
             $('#addPlaceForm').on('submit', function(e) {
                 e.preventDefault();
+                var formData = new FormData(this);
                 $.ajax({
-                    url: '<?= $base_url ?>admin/ajax/place_add.php', // Update this with the actual path to your PHP add file
+                    url: '<?= $base_url ?>admin/ajax/place_add.php',
                     type: 'POST',
-                    data: $(this).serialize(),
+                    data: formData,
+                    contentType: false,
+                    processData: false,
                     success: function(response) {
                         $('#addPlaceModal').modal('hide');
                         table.ajax.reload();
