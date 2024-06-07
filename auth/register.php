@@ -1,5 +1,9 @@
 <?php
-include '../lib/database.php';  // Include your database connection
+session_start();
+require '../vendor/autoload.php'; // Pastikan autoload.php benar lokasinya
+require '../Models/Database.php'; // Pastikan lokasi Database.php benar
+
+use Models\User;
 
 
 // Collect post data

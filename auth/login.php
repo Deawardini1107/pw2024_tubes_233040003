@@ -5,27 +5,39 @@ require '../Models/Database.php'; // Pastikan lokasi Database.php benar
 
 use Models\User;
 
-
+// Collect post data
+$username = $_POST['username'];
 $email = $_POST['email'];
-$password = $_POST['password'];
+$password1 = $_POST['password1'];
+$password2 = $_POST['password2'];
+$role = 'user';  // Default role
 
-// Menggunakan Eloquent untuk menemukan user
-$user = User::where('email', $email)->first();
-
-if ($user) {
-    // Verify password
-    if (password_verify($password, $user->password)) {
-        // Set session variables
-        $_SESSION['user_id'] = $user->id;
-        $_SESSION['email'] = $user->email;
-        $_SESSION['username'] = $user->username;
-        $_SESSION['role'] = $user->role;
-        // Redirect to dashboard or home page
-        header("Location: /paradise/index.php");
-        exit;
-    } else {
-        echo "Invalid email or password";
-    }
-} else {
-    echo "Invalid email or password";
+// Check if passwords match
+if ($password1 !== $password2) {
+    echo "Passwords do not match.";
+    exit();
 }
+
+// Check if the email already exists
+if (User::where('email', $email)->exists()) {
+    echo "Email is already registered.";
+    exit();
+}
+
+// Hash the password
+$hashed_password = password_hash($password1, PASSWORD_DEFAULT);
+
+// Create new user
+$user = new User();
+$user->username = $username;
+$user->email = $email;
+$user->password = $hashed_password;
+$user->role = $role;
+
+if ($user->save()) {
+    header("Location: /paradise/index.php");
+    exit;
+} else {
+    echo "Error: Unable to register user.";
+}
+?>
