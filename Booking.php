@@ -6,7 +6,7 @@ session_start();
 use Models\Booking;
 
 // Ambil semua booking
-$bookings = Booking::with(['place', 'user'])->get();
+$bookings = Booking::with(['place', 'user'])->where('user_id',$_SESSION['user_id'])->get();
 
 ?>
 
