@@ -7,6 +7,7 @@ use Models\Place;
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $place = Place::find($_POST['id']);
     $place->name = $_POST['name'];
+    $place->harga = $_POST['harga'];
     $place->description = $_POST['description'];
     $place->city = $_POST['city'];
     $place->category_id = $_POST['category_id'];

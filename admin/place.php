@@ -51,6 +51,7 @@ if (
             'city' => $place->city,
             'photos' => $place->photos,
             'admin_id' => $place->admin_id,
+            'harga' => $place->harga,
             'category' => $place->category ? $place->category->name : '',
             'user' => $place->user->username,
             'created_at' => $place->created_at,
@@ -191,6 +192,10 @@ if (
                             <input type="text" class="form-control" id="city" name="city" required>
                         </div>
                         <div class="form-group">
+                            <label for="edit-city">Harga</label>
+                            <input type="text" class="form-control" id="harga" name="harga" required>
+                        </div>
+                        <div class="form-group">
                             <label for="photos">Photos</label>
                             <input type="file" class="form-control" id="photos" name="photos" required>
                         </div>
@@ -242,6 +247,10 @@ if (
                         <div class="form-group">
                             <label for="edit-city">City</label>
                             <input type="text" class="form-control" id="edit-city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="edit-city">Harga</label>
+                            <input type="text" class="form-control" id="edit-harga" name="harga" required>
                         </div>
                         <div class="form-group">
                             <label for="edit-photos">Photos</label>
@@ -363,6 +372,7 @@ if (
                 var data = table.row($(this).parents('tr')).data();
                 $('#edit-id').val(data.id);
                 $('#edit-name').val(data.name);
+                $('#edit-harga').val(data.harga);
                 $('#edit-description').val(data.description);
                 $('#edit-city').val(data.city);
                 // Display the existing photo if available
