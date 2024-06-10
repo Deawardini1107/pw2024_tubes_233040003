@@ -1,5 +1,5 @@
 <?php
-require 'Models/Database.php'; 
+require 'Models/Database.php';
 session_start();
 
 
@@ -7,375 +7,632 @@ session_start();
 
 ?>
 
-<!DOCTYPE html>
+<!doctype html>
+<html class="no-js" lang="zxx">
 
-<!-- Mirrored from www.vasterad.com/themes/listeo_22/index-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Jun 2024 07:03:14 GMT -->
 
 <head>
-
-    <!-- Basic Page Needs
-================================================== -->
-    <title>Listeo</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
-================================================== -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/main-color.css" id="colors">
-
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home One || Tour & Travel HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/chosen.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/plugins/dropzone.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
+    <link rel="stylesheet" href="assets/css/vendor/icomoon.css">
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
+
 
 <body>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header Container
-================================================== -->
-        <?php require_once 'components/header.php'; ?>
-        <div class="clearfix"></div>
-        <!-- Header Container / End -->
-
-
-
-        <!-- Slider
-================================================== -->
-
-        <!-- Revolution Slider -->
-        <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classicslider1" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-
-            <!-- 5.0.7 auto mode -->
-            <div id="rev_slider_4_1" class="rev_slider home fullwidthabanner" style="display:none;" data-version="5.0.7">
-                <ul>
-
-                    <!-- Slide  -->
-                    <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
-
-                        <!-- Background -->
-                        <img src="assets/images/slider-bg-01.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0">
-
-                        <!-- Caption-->
-                        <div class="tp-caption custom-caption-2 tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0" id="slide-1-layer-2" data-x="['left','left','left','left']" data-hoffset="['0','40','40','40']" data-y="['middle','middle','middle','middle']" data-voffset="['0']" data-width="['640','640', 640','420','320']" data-height="auto" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:0;opacity:0;s:1000;e:Power2.easeOutExpo;s:400;e:Power2.easeOutExpo" data-transform_out="" data-mask_in="x:0px;y:[20%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-responsive_offset="on">
-
-                            <!-- Caption Content -->
-                            <div class="R_title margin-bottom-15" id="slide-2-layer-1" data-x="['left','center','center','center']" data-hoffset="['0','0','40','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-20','-80']" data-fontsize="['42','36', '32','36','22']" data-lineheight="['70','60','60','45','35']" data-width="['640','640', 640','420','320']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:-50px;sX:2;sY:2;opacity:0;s:1000;e:Power4.easeOut;" data-transform_out="opacity:0;s:300;" data-start="600" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 6; color: #fff; letter-spacing: 0px; font-weight: 600; ">Discover City Gems</div>
-
-                            <div class="caption-text">Interactively procrastinate high-payoff content without backward-compatible data. Quickly cultivate optimal processes and tactical architectures.</div>
-                            <a href="#" class="button medium">Get Started</a>
-                        </div>
-
-                    </li>
-
-                    <!-- Slide  -->
-                    <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
-
-                        <!-- Background -->
-                        <img src="assets/images/slider-bg-02.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="112" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0">
-
-                        <!-- Caption-->
-                        <div class="tp-caption centered custom-caption-2 tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0" id="slide-2-layer-2" data-x="['center','center','center','center']" data-hoffset="['0']" data-y="['middle','middle','middle','middle']" data-voffset="['0']" data-width="['640','640', 640','420','320']" data-height="auto" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:0;opacity:0;s:1000;e:Power2.easeOutExpo;s:400;e:Power2.easeOutExpo" data-transform_out="" data-mask_in="x:0px;y:[20%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-responsive_offset="on">
-
-                            <!-- Caption Content -->
-                            <div class="R_title margin-bottom-15" id="slide-2-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-20','-80']" data-fontsize="['42','36', '32','36','22']" data-lineheight="['70','60','60','45','35']" data-width="['640','640', 640','420','320']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:-50px;sX:2;sY:2;opacity:0;s:1000;e:Power4.easeOut;" data-transform_out="opacity:0;s:300;" data-start="600" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 6; color: #fff; letter-spacing: 0px; font-weight: 600; ">Streamline Your Business</div>
-
-                            <div class="caption-text">Proactively envisioned multimedia based on expertise cross-media growth strategies. Pontificate installed base portals after maintainable products.</div>
-                            <a href="#" class="button medium">Read More</a>
-                        </div>
-
-                    </li>
-
-                </ul>
-                <div class="tp-static-layers"></div>
-
-            </div>
+    <!-- preloader start -->
+    <div id="preloader">
+        <div class="bd-three-bounce">
+            <div class="bd-child bd-bounce1"></div>
+            <div class="bd-child bd-bounce2"></div>
+            <div class="bd-child bd-bounce3"></div>
         </div>
-        <!-- Revolution Slider / End -->
+    </div>
+    <!-- preloader end -->
 
+    <!-- Header area start -->
+    <?php require_once 'components/header.php'; ?>
 
-        <!-- Content
-================================================== -->
+    <!-- Header area end -->
 
-        <!-- Container -->
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-12">
-                    <h3 class="headline centered margin-bottom-35 margin-top-70">Popular Cities <span>Browse listings in popular places</span></h3>
-                </div>
-
-                <div class="col-md-4">
-
-                    <!-- Image Box -->
-                    <a href="listings-list-with-sidebar.html" class="img-box" data-background-image="assets/images/popular-location-01.jpg">
-                        <div class="img-box-content visible">
-                            <h4>New York </h4>
-                            <span>14 Listings</span>
+    <!-- Offcanvas area start -->
+    <div class="fix">
+        <div class="offcanvas-area">
+            <div class="offcanvas-wrapper">
+                <div class="offcanvas-content">
+                    <div class="offcanvas-top d-flex justify-content-between align-items-center mb-25">
+                        <div class="offcanvas-logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo-black.svg" alt="logo not found">
+                            </a>
                         </div>
-                    </a>
-
-                </div>
-
-                <div class="col-md-8">
-
-                    <!-- Image Box -->
-                    <a href="listings-list-with-sidebar.html" class="img-box" data-background-image="assets/images/popular-location-02.jpg">
-                        <div class="img-box-content visible">
-                            <h4>Los Angeles</h4>
-                            <span>24 Listings</span>
+                        <div class="offcanvas-close">
+                            <button class="offcanvas-close-icon animation--flip">
+                                <span class="offcanvas-m-lines">
+                                    <span class="offcanvas-m-line line--1"></span><span class="offcanvas-m-line line--2"></span><span class="offcanvas-m-line line--3"></span>
+                                </span>
+                            </button>
                         </div>
-                    </a>
-
-                </div>
-
-                <div class="col-md-8">
-
-                    <!-- Image Box -->
-                    <a href="listings-list-with-sidebar.html" class="img-box" data-background-image="assets/images/popular-location-03.jpg">
-                        <div class="img-box-content visible">
-                            <h4>San Francisco </h4>
-                            <span>12 Listings</span>
-                        </div>
-                    </a>
-
-                </div>
-
-                <div class="col-md-4">
-
-                    <!-- Image Box -->
-                    <a href="listings-list-with-sidebar.html" class="img-box" data-background-image="assets/images/popular-location-04.jpg">
-                        <div class="img-box-content visible">
-                            <h4>Miami</h4>
-                            <span>9 Listings</span>
-                        </div>
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-        <!-- Container / End -->
-
-
-
-        <!-- Fullwidth Section -->
-        <section class="fullwidth margin-top-65 padding-top-75 padding-bottom-70" data-background-color="#f8f8f8">
-
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-12">
-                        <h3 class="headline centered margin-bottom-45">
-                            Most Visited Places
-                            <span>Discover top-rated local businesses</span>
-                        </h3>
                     </div>
+                    <div class="offcanvas-search mb-0">
+                        <form action="#">
+                            <input type="text" name="offcanvasSearch" placeholder="Search here">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <div class="mobile-menu fix mb-25"></div>
+                    <div class="offcanvas-about d-none d-lg-block mb-25">
+                        <h4 class="offcanvas-title-meta">About Tourigo</h4>
+                        <p>Explore stunning destinations and create immersive travel experiences that inspire wanderlust
+                            and
+                            captivate your audience from the start.</p>
+                    </div>
+                    <div class="offcanvas-contact mb-25">
+                        <h4 class="offcanvas-title-meta">Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="offcanvas-contact-icon">
+                                    <a target="_blank" href="#">
+                                        <i class="fal fa-map-marker-alt"></i></a>
+                                </div>
+                                <div class="offcanvas-contact-text">
+                                    <a target="_blank" href="#">1426 Center StreetBend, 97702, California, USA</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="offcanvas-contact-icon">
+                                    <a href="tel:+415864872899"><i class="far fa-phone"></i></a>
+                                </div>
+                                <div class="offcanvas-contact-text">
+                                    <a href="tel:+415864872899">+415-864-8728-99</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="offcanvas-contact-icon">
+                                    <a href="https://html.bdevs.net/cdn-cgi/l/email-protection#9cefe9ececf3eee8dce8f3e9eef5fbf3b2fff3f1"><i class="fal fa-envelope"></i></a>
+                                </div>
+                                <div class="offcanvas-contact-text">
+                                    <a href="https://html.bdevs.net/cdn-cgi/l/email-protection#d2a1a7a2a2bda0a692a6bda7a0bbb5bdfcb1bdbf"><span class="__cf_email__" data-cfemail="166563666679646256627963647f71793875797b">[email&#160;protected]</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas-btn mb-25">
+                        <h4 class="offcanvas-title-meta">Account</h4>
+                        <div class="header-btn-wrap gap-10">
+                            <a class="bd-btn btn-style text-btn" href="sign-in.html">Log In</a>
+                            <a class="bd-btn btn-style text-btn" href="contact.html">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="offcanvas-social">
+                        <h4 class="offcanvas-title-meta">Subscribe & Follow</h4>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas-overlay"></div>
+    <div class="offcanvas-overlay-white"></div>
+    <!-- Offcanvas area start -->
 
-                    <div class="col-md-12">
-                        <div class="simple-slick-carousel dots-nav">
-                            <?php
-                            // Menggunakan Eloquent untuk mengambil data tempat, kategori, dan pengguna yang terkait
-                            $places = \Models\Place::select('places.id', 'places.name', 'places.description', 'places.city','places.photos','categories.name AS category_name', 'users.username AS admin_username')
-                                ->join('categories', 'places.category_id', '=', 'categories.id')
-                                ->join('users', 'places.admin_id', '=', 'users.id')
-                                ->get();
-                            ?>
+    <!-- modal booking form start -->
+    <div class="booking-model">
+        <div class="modal fade" id="popUpBookingForm" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Booking Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-body-top mb-20">
+                            <div class="d-flex gap-24 justify-content-between align-items-center mb-30">
+                                <h6 class="guest-title small">Adult</h6>
+                                <div class="guest-number">
+                                    <span class="guest-number-minus">
+                                        <i class="fa-sharp fa-regular fa-minus"></i>
+                                    </span>
+                                    <input class="guest-number-input" type="text" value="3">
+                                    <span class="guest-number-plus">
+                                        <i class="fa-sharp fa-regular fa-plus"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-24 justify-content-between align-items-center mb-30">
+                                <h6 class="guest-title small">Infant</h6>
+                                <div class="guest-number">
+                                    <span class="guest-number-minus">
+                                        <i class="fa-sharp fa-regular fa-minus"></i>
+                                    </span>
+                                    <input class="guest-number-input" type="text" value="1">
+                                    <span class="guest-number-plus">
+                                        <i class="fa-sharp fa-regular fa-plus"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-10 justify-content-between align-items-center">
+                                <h6 class="guest-title small">Date</h6>
+                                <div class="booking-modal-form-input">
+                                    <input class="form-control" id="selectingMultipleDate" type="text" placeholder="Select Your date Range" readonly="readonly">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body-bottom">
+                            <h6 class="mb-10">Add Infant's Ages</h6>
+                            <div class="booking-infant-age">
+                                <select name="years" id="years">
+                                    <option>9 Years</option>
+                                    <option>10 Years</option>
+                                    <option selected>11 Years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="booking.html" class="bd-primary-btn btn-style is-bg radius-60">
+                            <span class="bd-primary-btn-text">Continue</span>
+                            <span class="bd-primary-btn-circle"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal booking form end -->
 
-                            <?php foreach ($places as $place) : ?>
-                                <!-- Listing Item -->
-                                <div class="carousel-item">
-                                    <a href="place-detail.php?placeid=<?= $place->id ?>" class="listing-item-container compact">
-                                        <div class="listing-item">
-                                            <img src="<?=$place->photos?>" alt="">
-                                            <div class="listing-item-content">
-                                                <h3><?= $place->name ?> <i class="verified-icon"></i></h3>
-                                                <span><?= $place->city ?></span>
-                                            </div>
-                                            <span class="like-icon"></span>
+    <!-- Body main wrapper start -->
+    <main class="main-area fix">
+
+        <!-- Banner area start -->
+        <section class="banner-area banner-height p-relative z-index-11 image-bg" data-background="assets/images/bg/banner-bg.png">
+            <div class="banner-shape">
+                <div class="banner-shape-one">
+                    <img src="assets/images/shapes/circle-bg.png" alt="image">
+                </div>
+                <div class="banner-shape-two">
+                    <img src="assets/images/shapes/sky.png" alt="image">
+                </div>
+                <div class="banner-shape-three">
+                    <img src="assets/images/shapes/circle.png" alt="image">
+                </div>
+                <div class="banner-shape-four">
+                    <img src="assets/images/shapes/circle-bg2.png" alt="image">
+                </div>
+                <div class="banner-shape-five">
+                    <img src="assets/images/shapes/half-circle.png" alt="image">
+                </div>
+                <div class="banner-shape-six">
+                    <img src="assets/images/shapes/plane.png" alt="image">
+                </div>
+                <div class="banner-shape-seven">
+                    <img src="assets/images/shapes/plane-line.png" alt="image">
+                </div>
+                <div class="banner-shape-eight">
+                    <img src="assets/images/shapes/dot-square.png" alt="image">
+                </div>
+            </div>
+            <div class="swiper banner__active overflow-visible p-relative">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide banner_more_item">
+                        <div class="container">
+                            <div class="row gy-24 align-items-center justify-content-between">
+                                <div class="col-xxl-7 col-xl-6 col-lg-6">
+                                    <div class="mt-50">
+                                        <div class="banner-content p-relative wow bdFadeInLeft" data-wow-delay=".2s">
+                                            <span class="section-subtitle mb-25 wow bdFadeInLeft" data-wow-delay=".3s">Discover Bandung</span>
+                                            <h1 class="banner-title wow bdFadeInLeft" data-wow-delay=".4s">Explore the Hidden Gems <span class="yellow-shape">of Bandung <img src="assets/images/shapes/yellow-shape.png" alt="yellow-shape"></span></h1>
                                         </div>
+                                        <div class="banner-search-wrapper mt-45 wow bdFadeIn" data-wow-delay=".5s">
+                                            <div class="banner-search-box">
+                                                <div class="banner-search-form">
+                                                    <div class="banner-search-field has-separator d-flex align-items-center gap-10">
+                                                        <div class="search-icon-bg">
+                                                            <span><i class="fa-regular fa-location-dot"></i></span>
+                                                        </div>
+                                                        <div class="banner-search-item banner-select">
+                                                            <p class="b2 mb-0 fw-5">Where to</p>
+                                                            <div class="banner-search-select">
+                                                                <select name="location" id="location">
+                                                                    <option>Search location</option>
+                                                                    <option>Kawah Putih</option>
+                                                                    <option>Tangkuban Perahu</option>
+                                                                    <option>Dusun Bambu</option>
+                                                                    <option>Farmhouse Susu Lembang</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="banner-search-field has-separator d-flex align-items-center gap-10">
+                                                        <div class="search-icon-bg">
+                                                            <span><i class="icon-cleander"></i></span>
+                                                        </div>
+                                                        <div class="banner-search-item">
+                                                            <p class="b2 mb-0 fw-5">Duration</p>
+                                                            <div class="banner-form-input">
+                                                                <input class="form-control" id="selectingMultipleDates" type="text" placeholder="Select Your date" readonly="readonly">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="banner-search-field d-flex align-items-center gap-10">
+                                                        <div class="search-icon-bg">
+                                                            <span><i class="fa-regular fa-location-dot"></i></span>
+                                                        </div>
+                                                        <div class="banner-search-item banner-select">
+                                                            <p class="b2 mb-0 fw-5">Tour Types</p>
+                                                            <div class="banner-search-select">
+                                                                <select>
+                                                                    <option>Adventure</option>
+                                                                    <option>Nature</option>
+                                                                    <option>Family</option>
+                                                                    <option>Culture</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="banner-search-button">
+                                                    <button type="submit" class="banner-btn banner-square-btn bd-btn btn-style radius-10"><span>
+                                                            <i class="fa-regular fa-magnifying-glass"></i></span> Search
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-5 col-xl-6 col-lg-6">
+                                    <div class="banner-thumb-wrapper position-relative wow bdFadeInRight" data-wow-delay=".3s">
+                                        <div class="banner-thumb-one wow bdFadeInRight" data-wow-delay=".4s">
+                                            <img src="assets/images/banner/wisata bandung-20230526015236.webp" alt="image">
+                                        </div>
+                                        <div class="banner-thumb-two wow bdFadeInRight" data-wow-delay=".5s">
+                                            <img src="assets/images/banner/59ea56106b9816b491f322a2157d119f.webp" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-nav-btn banner-one-navigation d-none">
+                    <div class="banner-pagination">
+                        <div class="swiper-pagination bd-pagination justify-content-center"></div>
+                    </div>
+                    <div class="banner-navigation-btn">
+                        <button class="tourigo-navigation-prev"><i class="fa-regular fa-angle-left"></i></button>
+                        <button class="tourigo-navigation-next"><i class="fa-regular fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Banner area start -->
+
+
+
+
+        <!-- about area Start -->
+        <section class="bd-about-area section-space about-bg p-relative image-bg">
+            <div class="container">
+                <div class="about-shape">
+                    <div class="about-shape-one">
+                        <img src="assets/images/shapes/stone.png" alt="shape">
+                    </div>
+                    <div class="about-shape-two">
+                        <img src="assets/images/shapes/circle.png" alt="shape">
+                    </div>
+                    <div class="about-shape-three">
+                        <img src="assets/images/shapes/plane-3.png" alt="shape">
+                    </div>
+                    <div class="about-shape-four">
+                        <img src="assets/images/shapes/camera-2.png" alt="shape">
+                    </div>
+                </div>
+                <div class="row gy-24 align-items-center">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-thumb-wrap about-style">
+                            <div class="about-thumb-one wow img-custom-anim-left">
+                                <img src="assets/images/banner/606ccdec4dc98 (1).png" alt="image">
+                            </div>
+                            <div class="about-thumb-two wow img-custom-anim-right image-hover-effect">
+                                <img src="assets/images/banner/wisata-sejuk-bandung-601263368.webp" alt="image">
+                            </div>
+                           
+                            <div class="about-badge">
+                                <img src="assets/images/shapes/white-badge.png" alt="shape">
+                                <div class="about-badge-text">
+                                    <span class="number">30%</span>
+                                    <span>Discount</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title-wrapper mb-35">
+                                <span class="section-subtitle mb-15">About Bandung</span>
+                                <h2 class="section-title mb-20">Discover the Charm of Bandung</h2>
+                                <p>Bandung, the capital city of West Java, is known for its vibrant culture, beautiful landscapes, and cool climate. Often referred to as the "Paris of Java," Bandung is a popular destination for both local and international tourists.</p>
+                            </div>
+                            <div class="about-feature-list">
+                                <ul>
+                                    <li>
+                                        <span class="list-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <p>Explore the rich history and colonial architecture of Bandung.</p>
+                                    </li>
+                                    <li>
+                                        <span class="list-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <p>Enjoy the stunning natural attractions such as Tangkuban Perahu and Kawah Putih.</p>
+                                    </li>
+                                    <li>
+                                        <span class="list-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <p>Experience the diverse culinary scene and vibrant shopping destinations.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="about-btn-wrap">
+                                <div class="about-btn">
+                                    <a href="contact.html" class="bd-primary-btn btn-style has-arrow is-bg radius-60">
+                                        <span class="bd-primary-btn-arrow arrow-right"><i class="fa-regular fa-arrow-right"></i></span>
+                                        <span class="bd-primary-btn-text">Know More</span>
+                                        <span class="bd-primary-btn-circle"></span>
+                                        <span class="bd-primary-btn-arrow arrow-left"><i class="fa-regular fa-arrow-right"></i></span>
                                     </a>
                                 </div>
-                                <!-- Listing Item / End -->
-                            <?php endforeach ?>
+                                <div class="about-call">
+                                    <span><i class="icon-support"></i></span>
+                                    <a class="fw-5" href="tel:0855554123">0855554123</a>
+                                </div>
+                            </div>
                         </div>
-
-
                     </div>
-
                 </div>
             </div>
-
         </section>
-        <!-- Fullwidth Section / End -->
+        <!-- about area end -->
 
 
+        <!-- tour area start -->
+        <section class="bd-tour-area section-space">
+            <div class="container">
+                <div class="row gy-24 align-items-center justify-content-between section-title-space">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="section-title-wrapper">
+                            <span class="section-subtitle mb-10">Our Trips</span>
+                            <h2 class="section-title">Feature Packages</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="bd-tour-btn text-md-end">
+                            <a href="place.php" class="bd-primary-btn btn-style has-arrow radius-60">
+                                <span class="bd-primary-btn-arrow arrow-right"><i class="fa-regular fa-arrow-right"></i></span>
+                                <span class="bd-primary-btn-text">More Packages</span>
+                                <span class="bd-primary-btn-circle"></span>
+                                <span class="bd-primary-btn-arrow arrow-left"><i class="fa-regular fa-arrow-right"></i></span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 wow bdFadeInUp">
+                        <div class="tour-slide-wrapper p-relative">
+                            <div class="swiper tour__active">
+                                <div class="swiper-wrapper">
+
+                                    <?php
+                                    // Menggunakan Eloquent untuk mengambil data tempat, kategori, dan pengguna yang terkait
+                                    $places = \Models\Place::select('places.id', 'places.name', 'places.description', 'places.city', 'places.photos', 'categories.name AS category_name', 'users.username AS admin_username')
+                                        ->join('categories', 'places.category_id', '=', 'categories.id')
+                                        ->join('users', 'places.admin_id', '=', 'users.id')
+                                        ->get();
+                                    ?>
+                                    <?php foreach ($places as $place) : ?>
+                                        <?php
+                                        // Ambil komentar untuk tempat tertentu menggunakan Eloquent
+                                        $comments = \Models\Comment::select('comments.rating')
+                                            ->where('comments.place_id', $place->id)
+                                            ->get();
+
+                                        $totalRating = 0;
+                                        $numOfReviews = $comments->count();
+
+                                        // Jumlahkan semua peringkat
+                                        foreach ($comments as $comment) {
+                                            $totalRating += $comment->rating;
+                                        }
+
+                                        // Hitung nilai rata-rata
+                                        $averageRating = $numOfReviews > 0 ? $totalRating / $numOfReviews : 0;
+
+                                      
+                                        ?>
+                                        <div class="swiper-slide">
+                                            <div class="tour-wrapper style-one">
+                                                <div class="p-relative">
+                                                    <div class="tour-thumb image-overly">
+                                                        <a href="place-detail.php?placeid=<?= $place->id ?>"><img src="<?= $place->photos ?>" alt="image"></a>
+                                                    </div>
+                                                    <div class="tour-meta d-flex align-items-center justify-content-between">
+                                                        <button class="tour-favorite tour-like">
+                                                            <i class="icon-heart"></i>
+                                                        </button>
+                                                        <div class="tour-location">
+                                                            <span><a href="place-detail.php?placeid=<?= $place->id ?>"><i class="fa-regular fa-location-dot"></i><?= $place->city ?></a></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tour-content">
+                                                    <div class="tour-rating d-flex flex-wrap align-items-center gap-10 mb-10">
+                                                        <div class="tour-rating-icon fs-14 d-flex rating-color">
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </div>
+                                                        <div class="tour-rating-text">
+                                                            <span><?= round($averageRating)?> (<?=number_format($averageRating, 1)?> Ratings)</span>
+                                                        </div>
+                                                    </div>
+                                                    <h5 class="tour-title fw-5 underline mb-5"><a href="place-detail.php?placeid=<?= $place->id ?>"><?= $place->city ?></a></h5>
+                                                    <span class="tour-price b3"><?= number_format($place->harga,0) ?></span>
+                                                    <div class="tour-divider"></div>
+
+                                                    <div class="tour-meta d-flex align-items-center justify-content-between">
+                                                        <div class="time d-flex align-items-center gap--5">
+                                                            <i class="icon-heart"></i>
+                                                            <span>5 days</span>
+                                                        </div>
+                                                        <div class="tour-btn">
+                                                            <button class="bd-text-btn style-two" type="button" data-bs-toggle="modal" data-bs-target="#popUpBookingForm">Book Now
+                                                                <span class="icon__box">
+                                                                    <i class="fa-regular fa-arrow-right-long icon__first"></i>
+                                                                    <i class="fa-regular fa-arrow-right-long icon__second"></i>
+                                                                </span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php endforeach ?>
 
 
+                                </div>
+                                <div class="slider-pagination-wrapper">
+                                    <div class="slider-pagination bd-pagination mt-50 justify-content-center"></div>
+                                </div>
+                            </div>
+                            <div class="tour-navigation btn-navigation d-none d-xxl-block">
+                                <button class="tourigo-navigation-prev"><i class="fa-regular fa-angle-left"></i></button>
+                                <button class="tourigo-navigation-next"><i class="fa-regular fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- tour area end -->
 
+        <!-- offer area start -->
+        <section class="bd-offer-area section-space-bottom">
+            <div class="container">
+                <div class="row gy-24">
+                    <div class="col-xl-6 col-lg-6 col-md-12 wow bdFadeInLeft">
+                        <div class="offer-wrapper p-relative offer-thumb-bg image-bg" data-background="assets/images/banner/grafika-cikole-lembang_169.jpeg">
+                            <div class="offer-content-wrap">
+                                <div class="offer-content">
+                                    <div class="section-title-wrapper mb-30">
+                                        <span class="section-subtitle color-warning mb-15">Explore Bandung</span>
+                                        <h2 class="section-title small white-text mb-20">Special Offer: <br> Buy 1 Tour Package, Get 1 Free!</h2>
+                                        <p>Discover the beauty and charm of Bandung with our exclusive tour packages.</p>
+                                    </div>
+                                    <div class="offer-btn">
+                                        <a href="booking.php" class="bd-primary-btn btn-style has-arrow is-bg btn-tertiary is-white radius-60">
+                                            <span class="bd-primary-btn-arrow arrow-right"><i class="fa-regular fa-arrow-right"></i></span>
+                                            <span class="bd-primary-btn-text">Book Now</span>
+                                            <span class="bd-primary-btn-circle"></span>
+                                            <span class="bd-primary-btn-arrow arrow-left"><i class="fa-regular fa-arrow-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 wow bdFadeInRight">
+                        <div class="offer-wrapper p-relative offer-thumb-bg style-two image-bg" data-background="assets/images/banner/6-Tempat-Wisata-Hits-di-Kabupaten-Bandung-1280x720.webp">
+                            <div class="offer-content-wrap left-content">
+                                <div class="offer-content">
+                                    <div class="section-title-wrapper mb-30">
+                                        <span class="section-subtitle color-warning mb-15">Explore Bandung</span>
+                                        <h2 class="section-title small white-text mb-20">Ultimate Adventure Awaits in Bandung!</h2>
+                                        <p>Join us for an unforgettable adventure in the heart of West Java. Experience the culture, nature, and excitement of Bandung.</p>
+                                    </div>
+                                    <div class="offer-btn">
+                                        <a href="booking.php" class="bd-primary-btn btn-style has-arrow is-bg btn-tertiary is-white radius-60">
+                                            <span class="bd-primary-btn-arrow arrow-right"><i class="fa-regular fa-arrow-right"></i></span>
+                                            <span class="bd-primary-btn-text">Book Now</span>
+                                            <span class="bd-primary-btn-circle"></span>
+                                            <span class="bd-primary-btn-arrow arrow-left"><i class="fa-regular fa-arrow-right"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- offer area end -->
 
-        <!-- Footer
-================================================== -->
-        <?php require_once 'components/footer.php'; ?>
-        <!-- Footer / End -->
+    </main>
+    <!-- Body main wrapper end -->
 
+    <!-- Footer area start -->
 
-        <!-- Back To Top Button -->
-        <div id="backtotop"><a href="#"></a></div>
+    <?php require_once 'components/footer.php'; ?>
+    <!-- Footer area end -->
 
-
+    <!-- back to top -->
+    <!-- Backtotop start -->
+    <div class="backtotop-wrap cursor-pointer">
+        <svg class="backtotop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
     </div>
-    <!-- Wrapper / End -->
+    <!-- Backtotop end -->
 
-
-
-    <!-- Scripts
-================================================== -->
-    <script type="text/javascript" src="assets/scripts/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/jquery-migrate-3.3.2.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/mmenu.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/chosen.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/slick.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/rangeslider.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/magnific-popup.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/waypoints.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/counterup.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/tooltips.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/custom.js"></script>
-
-
-
-
-    <!-- REVOLUTION SLIDER SCRIPT -->
-    <script type="text/javascript" src="assets/scripts/themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/themepunch.revolution.min.js"></script>
-
-    <script type="text/javascript">
-        var tpj = jQuery;
-        var revapi4;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_4_1").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_4_1");
-            } else {
-                revapi4 = tpj("#rev_slider_4_1").show().revolution({
-                    sliderType: "standard",
-                    jsFileLocation: "assets/scripts/",
-                    sliderLayout: "auto",
-                    dottedOverlay: "none",
-                    delay: 9000,
-                    navigation: {
-                        keyboardNavigation: "off",
-                        keyboard_direction: "horizontal",
-                        mouseScrollNavigation: "off",
-                        onHoverStop: "on",
-                        touch: {
-                            touchenabled: "on",
-                            swipe_threshold: 75,
-                            swipe_min_touches: 1,
-                            swipe_direction: "horizontal",
-                            drag_block_vertical: false
-                        },
-                        arrows: {
-                            style: "zeus",
-                            enable: true,
-                            hide_onmobile: true,
-                            hide_under: 600,
-                            hide_onleave: true,
-                            hide_delay: 200,
-                            hide_delay_mobile: 1200,
-                            tmp: '<div class="tp-title-wrap"></div>',
-                            left: {
-                                h_align: "left",
-                                v_align: "center",
-                                h_offset: 40,
-                                v_offset: 0
-                            },
-                            right: {
-                                h_align: "right",
-                                v_align: "center",
-                                h_offset: 40,
-                                v_offset: 0
-                            }
-                        },
-                        bullets: {
-                            enable: false,
-                            hide_onmobile: true,
-                            hide_under: 600,
-                            style: "hermes",
-                            hide_onleave: true,
-                            hide_delay: 200,
-                            hide_delay_mobile: 1200,
-                            direction: "horizontal",
-                            h_align: "center",
-                            v_align: "bottom",
-                            h_offset: 0,
-                            v_offset: 32,
-                            space: 5,
-                            tmp: ''
-                        }
-                    },
-                    viewPort: {
-                        enable: true,
-                        outof: "pause",
-                        visible_area: "80%"
-                    },
-                    responsiveLevels: [1200, 992, 768, 480],
-                    visibilityLevels: [1200, 992, 768, 480],
-                    gridwidth: [1180, 1024, 778, 480],
-                    gridheight: [640, 500, 400, 300],
-                    lazyType: "none",
-                    parallax: {
-                        type: "mouse",
-                        origo: "slidercenter",
-                        speed: 2000,
-                        levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 25, 47, 48, 49, 50, 51, 55],
-                        type: "mouse",
-                    },
-                    shadow: 0,
-                    spinner: "off",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: false,
-                    }
-                });
-            }
-        }); /*ready*/
-    </script>
-
-
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
-	(Load Extensions only on Local File Systems ! 
-	The following part can be removed on Server for On Demand Loading) -->
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.video.min.js"></script>
-
-
-
-
-    <!-- Style Switcher
-================================================== -->
-    <?php require_once 'components/color.php'; ?>
-    <!-- Style Switcher / End -->
-
-
+    <!-- JS here -->
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/waypoints.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/meanmenu.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/wow.js"></script>
+    <script src="assets/js/plugins/dropzone.min.js"></script>
+    <script src="assets/js/vendor/magnific-popup.min.js"></script>
+    <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/vendor/purecounter.js"></script>
+    <script src="assets/js/plugins/nouislider.min.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/plugins/cleave.min.js"></script>
+    <script src="assets/js/plugins/flatpickr.js"></script>
+    <script src="assets/js/plugins/tinymce.min.js"></script>
+    <script src="assets/js/vendor/ajax-form.js"></script>
+    <script src="assets/js/vendor/smooth-scroll.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 

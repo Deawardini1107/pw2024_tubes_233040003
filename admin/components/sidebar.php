@@ -39,6 +39,13 @@
             <span>Komentar</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="<?= $base_url ?>admin/booking.php">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>List Booking</span></a>
+    </li>
+
+
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

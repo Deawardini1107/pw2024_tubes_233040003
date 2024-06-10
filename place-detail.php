@@ -108,470 +108,559 @@ if ($placeId > 0) {
 }
 ?>
 
+<!doctype html>
+<html class="no-js" lang="zxx">
 
-<!DOCTYPE html>
-
-<!-- Mirrored from www.vasterad.com/themes/listeo_22/index-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Jun 2024 07:03:14 GMT -->
 
 <head>
-
-    <!-- Basic Page Needs
-================================================== -->
-    <title>Listeo</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
-================================================== -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/main-color.css" id="colors">
-
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home One || Tour & Travel HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/chosen.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/plugins/dropzone.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
+    <link rel="stylesheet" href="assets/css/vendor/icomoon.css">
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+
 
 <body>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header Container
-================================================== -->
-        <?php require_once 'components/header.php'; ?>
-        <div class="clearfix"></div>
-        <!-- Header Container / End -->
-
-
-
-        <!-- Slider
-================================================== -->
-        <div class="listing-slider mfp-gallery-container margin-bottom-0">
-            <a href="<?= $place->photos ?>" data-background-image="<?= $place->photos ?>" class="item mfp-gallery" title="Title 1"></a>
-            <?php foreach ($place->comments as $photo) : ?>
-                <?php foreach ($photo->photos as $item) : ?>
-                    <a href="<?= $item->photo_url ?>" data-background-image="<?= $item->photo_url ?>" class="item mfp-gallery" title="Title 1"></a>
-                <?php endforeach; ?>
-
-
-            <?php endforeach; ?>
-
+    <!-- preloader start -->
+    <div id="preloader">
+        <div class="bd-three-bounce">
+            <div class="bd-child bd-bounce1"></div>
+            <div class="bd-child bd-bounce2"></div>
+            <div class="bd-child bd-bounce3"></div>
         </div>
+    </div>
+    <!-- preloader end -->
 
+    <!-- Header area start -->
+    <?php require_once 'components/header.php'; ?>
 
-        <!-- Content
-================================================== -->
-        <div class="container">
-            <div class="row sticky-wrapper">
-                <div class="col-lg-8 col-md-8 padding-right-30">
+    <!-- Header area end -->
 
-                    <!-- Titlebar -->
-                    <div id="titlebar" class="listing-titlebar">
-                        <div class="listing-titlebar-title">
-                            <h2><?= $place->name ?> </h2>
-                            <span>
-                                <a href="#listing-location" class="listing-address">
-                                    <i class="fa fa-map-marker"></i>
-                                    <?= $place->city ?>
-                                </a>
-                            </span>
-                            <div class="star-rating" data-rating="5">
-                                <?php
-                                // Ambil review untuk tempat tertentu menggunakan Eloquent
-                                $reviews = \Models\Comment::select('comments.rating', 'comments.content')
-                                    ->where('comments.place_id', $place->id)
-                                    ->get();
+    <!-- Offcanvas area start -->
+    <div class="fix">
+        <div class="offcanvas-area">
+            <div class="offcanvas-wrapper">
+                <div class="offcanvas-content">
+                    <div class="offcanvas-top d-flex justify-content-between align-items-center mb-25">
+                        <div class="offcanvas-logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo-black.svg" alt="logo not found">
+                            </a>
+                        </div>
+                        <div class="offcanvas-close">
+                            <button class="offcanvas-close-icon animation--flip">
+                                <span class="offcanvas-m-lines">
+                                    <span class="offcanvas-m-line line--1"></span><span class="offcanvas-m-line line--2"></span><span class="offcanvas-m-line line--3"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offcanvas-search mb-0">
+                        <form action="#">
+                            <input type="text" name="offcanvasSearch" placeholder="Search here">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <div class="mobile-menu fix mb-25"></div>
+                    <div class="offcanvas-about d-none d-lg-block mb-25">
+                        <h4 class="offcanvas-title-meta">About Tourigo</h4>
+                        <p>Explore stunning destinations and create immersive travel experiences that inspire wanderlust
+                            and
+                            captivate your audience from the start.</p>
+                    </div>
+                    <div class="offcanvas-contact mb-25">
+                        <h4 class="offcanvas-title-meta">Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="offcanvas-contact-icon">
+                                    <a target="_blank" href="#">
+                                        <i class="fal fa-map-marker-alt"></i></a>
+                                </div>
+                                <div class="offcanvas-contact-text">
+                                    <a target="_blank" href="#">1426 Center StreetBend, 97702, California, USA</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="offcanvas-contact-icon">
+                                    <a href="tel:+415864872899"><i class="far fa-phone"></i></a>
+                                </div>
+                                <div class="offcanvas-contact-text">
+                                    <a href="tel:+415864872899">+415-864-8728-99</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="offcanvas-contact-icon">
+                                    <a href="https://html.bdevs.net/cdn-cgi/l/email-protection#9cefe9ececf3eee8dce8f3e9eef5fbf3b2fff3f1"><i class="fal fa-envelope"></i></a>
+                                </div>
+                                <div class="offcanvas-contact-text">
+                                    <a href="https://html.bdevs.net/cdn-cgi/l/email-protection#d2a1a7a2a2bda0a692a6bda7a0bbb5bdfcb1bdbf"><span class="__cf_email__" data-cfemail="166563666679646256627963647f71793875797b">[email&#160;protected]</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas-btn mb-25">
+                        <h4 class="offcanvas-title-meta">Account</h4>
+                        <div class="header-btn-wrap gap-10">
+                            <a class="bd-btn btn-style text-btn" href="sign-in.html">Log In</a>
+                            <a class="bd-btn btn-style text-btn" href="contact.html">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="offcanvas-social">
+                        <h4 class="offcanvas-title-meta">Subscribe & Follow</h4>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas-overlay"></div>
+    <div class="offcanvas-overlay-white"></div>
+    <!-- Offcanvas area start -->
 
-                                if ($reviews->isNotEmpty()) : ?>
-                                    <?php
-                                    $totalRating = 0;
-                                    $numOfReviews = 0;
-                                    foreach ($reviews as $review) :
-                                        $totalRating += $review->rating;
-                                        $numOfReviews++;
-                                    ?>
-
-                                    <?php endforeach; ?>
-
-                                    <!-- Hitung nilai rata-rata -->
-                                    <?php $averageRating = $numOfReviews > 0 ? $totalRating / $numOfReviews : 0; ?>
-
-
-                                <?php endif; ?>
-                                <div class="rating-counter"><a href="#listing-reviews">(<?= $totalRating ?? 0 ?> reviews)</a></div>
+    <!-- modal booking form start -->
+    <div class="booking-model">
+        <div class="modal fade" id="popUpBookingForm" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Booking Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-body-top mb-20">
+                            <div class="d-flex gap-24 justify-content-between align-items-center mb-30">
+                                <h6 class="guest-title small">Adult</h6>
+                                <div class="guest-number">
+                                    <span class="guest-number-minus">
+                                        <i class="fa-sharp fa-regular fa-minus"></i>
+                                    </span>
+                                    <input class="guest-number-input" type="text" value="3">
+                                    <span class="guest-number-plus">
+                                        <i class="fa-sharp fa-regular fa-plus"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-24 justify-content-between align-items-center mb-30">
+                                <h6 class="guest-title small">Infant</h6>
+                                <div class="guest-number">
+                                    <span class="guest-number-minus">
+                                        <i class="fa-sharp fa-regular fa-minus"></i>
+                                    </span>
+                                    <input class="guest-number-input" type="text" value="1">
+                                    <span class="guest-number-plus">
+                                        <i class="fa-sharp fa-regular fa-plus"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-10 justify-content-between align-items-center">
+                                <h6 class="guest-title small">Date</h6>
+                                <div class="booking-modal-form-input">
+                                    <input class="form-control" id="selectingMultipleDate" type="text" placeholder="Select Your date Range" readonly="readonly">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body-bottom">
+                            <h6 class="mb-10">Add Infant's Ages</h6>
+                            <div class="booking-infant-age">
+                                <select name="years" id="years">
+                                    <option>9 Years</option>
+                                    <option>10 Years</option>
+                                    <option selected>11 Years</option>
+                                </select>
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- Overview -->
-                    <div id="listing-overview" class="listing-section">
-
-                        <!-- Description -->
-
-                        <?= $place->description ?>
-
-                        <div class="clearfix"></div>
-
-
+                    <div class="modal-footer">
+                        <a href="booking.html" class="bd-primary-btn btn-style is-bg radius-60">
+                            <span class="bd-primary-btn-text">Continue</span>
+                            <span class="bd-primary-btn-circle"></span>
+                        </a>
                     </div>
-
-
-
-                    <!-- Reviews -->
-                    <div id="listing-reviews" class="listing-section">
-                        <h3 class="listing-desc-headline margin-top-75 margin-bottom-20">Reviews <span>(12)</span></h3>
-
-                        <!-- Rating Overview -->
-                        <?php
-                        // Ambil komentar untuk tempat tertentu menggunakan Eloquent
-                        $comments = \Models\Comment::select('comments.rating')
-                            ->where('comments.place_id', $placeId)
-                            ->get();
-
-                        $totalRating = 0;
-                        $numOfReviews = $comments->count();
-
-                        // Jumlahkan semua peringkat
-                        foreach ($comments as $comment) {
-                            $totalRating += $comment->rating;
-                        }
-
-                        // Hitung nilai rata-rata
-                        $averageRating = $numOfReviews > 0 ? $totalRating / $numOfReviews : 0;
-
-                        // Tampilkan nilai rata-rata
-                        echo "<div class='rating-overview'>";
-                        echo "<div class='rating-overview-box'>";
-                        echo "<span class='rating-overview-box-total'>" . number_format($averageRating, 1) . "</span>";
-                        echo "<span class='rating-overview-box-percent'>out of 5.0</span>";
-                        echo "<div class='star-rating' data-rating='" . round($averageRating) . "'></div>";
-                        echo "</div>";
-                        echo "</div>";
-                        ?>
-
-                        <!-- Rating Overview / End -->
-
-
-                        <div class="clearfix"></div>
-
-                        <!-- Reviews -->
-                        <section class="comments listing-reviews">
-                            <ul>
-
-                                <?php if ($placeId > 0) : ?>
-                                    <?php
-                                    // Ambil komentar untuk tempat tertentu menggunakan Eloquent dengan foto-foto terkait
-                                    $comments = \Models\Comment::with('photos')
-                                        ->select('comments.id', 'comments.content', 'users.username', 'users.email', 'comments.created_at as comment_date', 'comments.rating')
-                                        ->join('users', 'comments.user_id', '=', 'users.id')
-                                        ->where('comments.place_id', $placeId)
-                                        ->get();
-                                    ?>
-
-                                    <?php if ($comments->isNotEmpty()) : ?>
-                                        <?php foreach ($comments as $comment) : ?>
-                                            <?php
-                                            $hash = md5(strtolower(trim($comment->email)));
-                                            $name = urlencode($comment->username);
-                                            ?>
-                                            <li>
-                                                <div class='avatar'><img src='https://ui-avatars.com/api/?name=<?= $name ?>' alt='' /></div>
-                                                <div class='comment-content'>
-                                                    <div class='arrow-comment'></div>
-                                                    <div class='comment-by'><?= htmlspecialchars($comment->username) ?> <i class='tip' data-tip-content='Person who left this review actually was a customer'></i> <span class='date'><?= $comment->comment_date ?></span>
-                                                        <div class='star-rating' data-rating='<?= $comment->rating ?>'></div>
-                                                    </div>
-                                                    <p><?= htmlspecialchars($comment->content) ?></p>
-                                                    <?php if ($comment->photos->isNotEmpty()) : ?>
-                                                        <!-- Jika ada foto-foto yang terkait, tampilkan -->
-                                                        <div class='review-images mfp-gallery-container'>
-                                                            <?php foreach ($comment->photos as $photo) : ?>
-                                                                <a href='<?= $photo->photo_url ?>' class='mfp-gallery'><img src='<?= $photo->photo_url ?>' alt=''></a>
-                                                            <?php endforeach; ?>
-                                                        </div>
-                                                    <?php endif; ?>
-                                                </div>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    <?php else : ?>
-                                        No comments found for this place.
-                                    <?php endif; ?>
-                                <?php else : ?>
-                                    Invalid place ID.
-                                <?php endif; ?>
-
-
-
-
-
-                            </ul>
-                        </section>
-
-
-                    </div>
-
-
-                    <!-- Add Review Box -->
-                    <div id="add-review" class="add-review-box">
-
-                        <!-- Add Review -->
-                        <h3 class="listing-desc-headline margin-bottom-10">Add Review</h3>
-                        <p class="comment-notes">Your email address will not be published.</p>
-
-
-                        <?php if (isset($_SESSION['user_id'])) : ?>
-                            <!-- Review Comment -->
-                            <form id="add-comment" class="add-comment" method="POST" enctype="multipart/form-data">
-                                <!-- Subrating #1 -->
-                                <div class="add-sub-rating">
-
-                                    <div class="sub-rating-stars">
-                                        <!-- Leave Rating -->
-                                        <div class="clearfix"></div>
-                                        <class class="leave-rating">
-                                            <input type="radio" name="rating" id="rating-1" value="5" />
-                                            <label for="rating-1" class="fa fa-star"></label>
-                                            <input type="radio" name="rating" id="rating-2" value="4" />
-                                            <label for="rating-2" class="fa fa-star"></label>
-                                            <input type="radio" name="rating" id="rating-3" value="3" />
-                                            <label for="rating-3" class="fa fa-star"></label>
-                                            <input type="radio" name="rating" id="rating-4" value="2" />
-                                            <label for="rating-4" class="fa fa-star"></label>
-                                            <input type="radio" name="rating" id="rating-5" value="1" />
-                                            <label for="rating-5" class="fa fa-star"></label>
-                                        </class>
-                                    </div>
-                                </div>
-
-
-                                <div class="uploadButton margin-top-15">
-                                    <input class="uploadButton-input" type="file" name="image[]" accept="image/*, application/pdf" id="upload" multiple />
-                                    <label class="uploadButton-button ripple-effect" for="upload">Add Photos</label>
-                                    <span class="uploadButton-file-name"></span>
-                                </div>
-
-                                <fieldset>
-                                    <div>
-                                        <label>Review:</label>
-                                        <textarea name="content" cols="40" rows="3" required></textarea>
-                                    </div>
-
-
-
-                                    <!-- Tombol submit -->
-                                    <button type="submit" name="submit_review" class="button">Submit Review</button>
-                                    <div class="clearfix"></div>
-                                </fieldset>
-                            </form>
-                        <?php else : ?>
-                            <!-- Display when user is not logged in -->
-                            <a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
-                        <?php endif; ?>
-
-                    </div>
-                    <!-- Add Review Box / End -->
-
-
                 </div>
-
-
-                <!-- Sidebar
-		================================================== -->
-                <div class="col-lg-4 col-md-4 margin-top-75 sticky">
-
-
-
-
-
-                    <!-- Contact -->
-                    <div class="boxed-widget margin-top-35">
-                        <div class="hosted-by-title">
-                            <h4><span>Hosted by</span> <a href="pages-user-profile.html"><?= $place->admin ?></a></h4>
-                            <a href="pages-user-profile.html" class="hosted-by-avatar"><img src="https://ui-avatars.com/api/?name=<?= $place->admin ?>" alt=""></a>
-                        </div>
-                        <ul class="listing-details-sidebar">
-                            <li><i class="fa fa-envelope-o"></i> <a href="#"><?= $place->admin_email ?></a></li>
-                        </ul>
-
-                    </div>
-                    <!-- Contact / End-->
-
-
-
-
-                </div>
-                <!-- Sidebar / End -->
-
             </div>
         </div>
-
-
-
-
-
-
-
-        <!-- Footer
-================================================== -->
-        <?php require_once 'components/footer.php'; ?>
-        <!-- Footer / End -->
-
-
-        <!-- Back To Top Button -->
-        <div id="backtotop"><a href="#"></a></div>
-
-
     </div>
-    <!-- Wrapper / End -->
+    <!-- modal booking form end -->
+
+    <!-- Body main wrapper start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <section class="bd-breadcrumb-area p-relative fix">
+            <!-- breadcrumb background image -->
+            <div class="bd-breadcrumb-bg" data-background="assets/images/bg/breadcrumb-bg.png"></div>
+            <div class="bd-breadcrumb-wrapper p-relative">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10">
+                            <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
+                                <div class="bd-breadcrumb-content text-center">
+                                    <h1 class="bd-breadcrumb-title">Destinations Details Right</h1>
+                                    <div class="bd-breadcrumb-list">
+                                        <span><a href="index.html"><i class="icon-home"></i>Time Travel</a></span>
+                                        <span>Destinations Details Right</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb area end -->
+
+        <!-- destinations-details area start -->
+        <section class="bd-destinations-details-area section-space">
+            <div class="container">
+
+                <div class="row gy-24">
+                    <div class="col-xxl-8 col-xl-8 col-lg-7">
+                        <div class="destinations-details-wrapper">
+                            <div class="destinations-details mb-25">
+                                <div class="destinations-details-slider details-slide p-relative mb-30">
+                                    <div class="swiper details-slide-activation">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="<?= $place->photos ?>" alt="image">
+                                            </div>
+                                            <?php foreach ($place->comments as $photo) : ?>
+                                                <?php foreach ($photo->photos as $item) : ?>
+                                                    <div class="swiper-slide">
+                                                        <img src="<?= $item->photo_url ?>" alt="image">
+                                                    </div>
+                                                    <a href="" data-background-image="<?= $item->photo_url ?>" class="item mfp-gallery" title="Title 1"></a>
+                                                <?php endforeach; ?>
 
 
-
-    <!-- Scripts
-================================================== -->
-    <script type="text/javascript" src="assets/scripts/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/jquery-migrate-3.3.2.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/mmenu.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/chosen.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/slick.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/rangeslider.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/magnific-popup.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/waypoints.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/counterup.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/tooltips.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/custom.js"></script>
+                                            <?php endforeach; ?>
 
 
+                                        </div>
+                                    </div>
+                                    <div class="details-slide-navigation btn-navigation">
+                                        <button class="tourigo-navigation-prev"><i class="fa-regular fa-angle-left"></i></button>
+                                        <button class="tourigo-navigation-next"><i class="fa-regular fa-angle-right"></i></button>
+                                    </div>
+                                </div>
+                                <div class="destinations-details-content">
+                                    <h3 class="destinations-details-title mb-15"><?= $place->name ?>
+                                    </h3>
+                                    <p class="mb-15"><?= $place->description ?></p>
+
+                                </div>
+                                <div class="section-divider mt-30 mb-25"></div>
+
+                            </div>
+                            <div class="tour-details-rating-wrapper">
+                                <h3>Reviews <span>(12)</span></h3>
+
+                                <!-- Rating Overview -->
+                                <div class="my-3">
+                                    <?php
+                                    // Ambil komentar untuk tempat tertentu menggunakan Eloquent
+                                    $comments = \Models\Comment::select('comments.rating')
+                                        ->where('comments.place_id', $placeId)
+                                        ->get();
+
+                                    $totalRating = 0;
+                                    $numOfReviews = $comments->count();
+
+                                    // Jumlahkan semua peringkat
+                                    foreach ($comments as $comment) {
+                                        $totalRating += $comment->rating;
+                                    }
+
+                                    // Hitung nilai rata-rata
+                                    $averageRating = $numOfReviews > 0 ? $totalRating / $numOfReviews : 0;
+
+                                    // Konversi rata-rata menjadi bintang
+                                    $stars = round($averageRating);
+                                    ?>
+
+                                    <div class="rating">
+                                        <?php for ($i = 0; $i < $stars; $i++) : ?>
+                                            <i class="fa fa-star"></i>
+                                        <?php endfor; ?>
+                                        <span>(<?= number_format($averageRating, 1) ?> out of 5)</span>
+                                    </div>
+
+                                </div>
+                                <style>
+                                    .review-images {
+                                        display: flex;
+                                        /* Menyusun gambar secara horizontal */
+                                        flex-wrap: wrap;
+                                        /* Izinkan gambar untuk pindah ke baris berikutnya jika ruang tidak cukup */
+                                        gap: 10px;
+                                        /* Memberi jarak antar gambar */
+                                    }
+
+                                    .review-images a {
+                                        width: 50px;
+                                        /* Lebar maksimal tautan untuk gambar */
+                                        flex: 1 1 auto;
+                                        /* Fleksibilitas tata letak gambar */
+                                    }
+
+                                    .review-images img {
+                                        width: 100px;
+                                        /* Gambar menyesuaikan lebar tautan */
+                                        height: auto;
+                                        /* Tinggi gambar otomatis menyesuaikan */
+                                        border-radius: 4px;
+                                        /* Memberikan sudut membulat pada gambar */
+                                    }
+                                </style>
+                                <div class="rewiew-content">
+                                    <?php if ($placeId > 0) : ?>
+                                        <?php
+                                        // Ambil komentar untuk tempat tertentu menggunakan Eloquent dengan foto-foto terkait
+                                        $comments = \Models\Comment::with('photos')
+                                            ->select('comments.id', 'comments.content', 'users.username', 'users.email', 'comments.created_at as comment_date', 'comments.rating')
+                                            ->join('users', 'comments.user_id', '=', 'users.id')
+                                            ->where('comments.place_id', $placeId)
+                                            ->get();
+                                        ?>
+
+                                        <?php if ($comments->isNotEmpty()) : ?>
+                                            <?php foreach ($comments as $comment) : ?>
+                                                <?php
+                                                $hash = md5(strtolower(trim($comment->email)));
+                                                $name = urlencode($comment->username);
+                                                ?>
+                                                <div class="tour-review-wrapper">
+                                                    <div class="media">
+                                                        <div class="thumbnail">
+                                                            <a href="#">
+                                                                <img src="https://ui-avatars.com/api/?name=<?= $name ?>" alt="Author Images">
+                                                            </a>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <div class="author-info">
+                                                                <h5 class="title">
+                                                                    <a class="hover-flip-item-wrapper" href="#">
+                                                                        <?= htmlspecialchars($comment->username) ?>
+                                                                    </a>
+                                                                    <a href="#">
+                                                                        <i class="fa-solid fa-thumbs-up"></i>
+                                                                    </a>
+                                                                </h5>
+                                                                <ul class="bd-meta">
+                                                                    <li class="has-seperator">On: <span>Aug 11, 2023</span></li>
+                                                                    <li>
+                                                                        <div class="rating">
+                                                                            <?php foreach (range(1, $comment->rating) as $i) : ?>
+                                                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                                            <?php endforeach; ?>
 
 
-    <!-- REVOLUTION SLIDER SCRIPT -->
-    <script type="text/javascript" src="assets/scripts/themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/themepunch.revolution.min.js"></script>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="content">
+                                                                <p class="description"><?= $comment->content ?></p>
+                                                                <?php if ($comment->photos->isNotEmpty()) : ?>
+                                                                    <!-- Jika ada foto-foto yang terkait, tampilkan -->
+                                                                    <div class='review-images mfp-gallery-container'>
+                                                                        <?php foreach ($comment->photos as $photo) : ?>
+                                                                            <a href='<?= $photo->photo_url ?>' class='mfp-gallery'><img src='<?= $photo->photo_url ?>' alt=''></a>
+                                                                        <?php endforeach; ?>
+                                                                    </div>
+                                                                <?php endif; ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-    <script type="text/javascript">
-        var tpj = jQuery;
-        var revapi4;
-        tpj(document).ready(function() {
-            if (tpj("#rev_slider_4_1").revolution == undefined) {
-                revslider_showDoubleJqueryError("#rev_slider_4_1");
-            } else {
-                revapi4 = tpj("#rev_slider_4_1").show().revolution({
-                    sliderType: "standard",
-                    jsFileLocation: "assets/scripts/",
-                    sliderLayout: "auto",
-                    dottedOverlay: "none",
-                    delay: 9000,
-                    navigation: {
-                        keyboardNavigation: "off",
-                        keyboard_direction: "horizontal",
-                        mouseScrollNavigation: "off",
-                        onHoverStop: "on",
-                        touch: {
-                            touchenabled: "on",
-                            swipe_threshold: 75,
-                            swipe_min_touches: 1,
-                            swipe_direction: "horizontal",
-                            drag_block_vertical: false
-                        },
-                        arrows: {
-                            style: "zeus",
-                            enable: true,
-                            hide_onmobile: true,
-                            hide_under: 600,
-                            hide_onleave: true,
-                            hide_delay: 200,
-                            hide_delay_mobile: 1200,
-                            tmp: '<div class="tp-title-wrap"></div>',
-                            left: {
-                                h_align: "left",
-                                v_align: "center",
-                                h_offset: 40,
-                                v_offset: 0
-                            },
-                            right: {
-                                h_align: "right",
-                                v_align: "center",
-                                h_offset: 40,
-                                v_offset: 0
-                            }
-                        },
-                        bullets: {
-                            enable: false,
-                            hide_onmobile: true,
-                            hide_under: 600,
-                            style: "hermes",
-                            hide_onleave: true,
-                            hide_delay: 200,
-                            hide_delay_mobile: 1200,
-                            direction: "horizontal",
-                            h_align: "center",
-                            v_align: "bottom",
-                            h_offset: 0,
-                            v_offset: 32,
-                            space: 5,
-                            tmp: ''
-                        }
-                    },
-                    viewPort: {
-                        enable: true,
-                        outof: "pause",
-                        visible_area: "80%"
-                    },
-                    responsiveLevels: [1200, 992, 768, 480],
-                    visibilityLevels: [1200, 992, 768, 480],
-                    gridwidth: [1180, 1024, 778, 480],
-                    gridheight: [640, 500, 400, 300],
-                    lazyType: "none",
-                    parallax: {
-                        type: "mouse",
-                        origo: "slidercenter",
-                        speed: 2000,
-                        levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 25, 47, 48, 49, 50, 51, 55],
-                        type: "mouse",
-                    },
-                    shadow: 0,
-                    spinner: "off",
-                    stopLoop: "off",
-                    stopAfterLoops: -1,
-                    stopAtSlide: -1,
-                    shuffle: "off",
-                    autoHeight: "off",
-                    hideThumbsOnMobile: "off",
-                    hideSliderAtLimit: 0,
-                    hideCaptionAtLimit: 0,
-                    hideAllCaptionAtLilmit: 0,
-                    debugMode: false,
-                    fallbacks: {
-                        simplifyAll: "off",
-                        nextSlideOnWindowFocus: "off",
-                        disableFocusListener: false,
-                    }
-                });
-            }
-        }); /*ready*/
-    </script>
+                                            <?php endforeach; ?>
+                                        <?php else : ?>
+                                            No comments found for this place.
+                                        <?php endif; ?>
+                                    <?php else : ?>
+                                        Invalid place ID.
+                                    <?php endif; ?>
+
+                                </div>
+                            </div>
+                            <div class="post-comment-form">
+                                <div class="post-comments-title">
+                                    <h4 class="mb-15">Leave a Comment</h4>
+                                    <span class="d-block mb-25">Your email address will not be published. Required
+                                        fields are
+                                        marked *</span>
+                                </div>
+                                <?php if (isset($_SESSION['user_id'])) : ?>
+                                    <!-- Review Comment Form -->
+                                    <form id="add-comment" class="add-comment" method="POST" enctype="multipart/form-data">
+                                        <!-- Subrating #1 -->
+                                        <div class="mb-3">
+                                            <!-- Leave Rating -->
+                                            <div>
+                                                <span class="mb-2 d-block">Your Rating:</span>
+                                                <div class="star-rating">
+                                                    <input class="btn-check" type="radio" name="rating" id="rating-5" value="5" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="rating-5"><i class="fa fa-star"></i></label>
+
+                                                    <input class="btn-check" type="radio" name="rating" id="rating-4" value="4" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="rating-4"><i class="fa fa-star"></i></label>
+
+                                                    <input class="btn-check" type="radio" name="rating" id="rating-3" value="3" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="rating-3"><i class="fa fa-star"></i></label>
+
+                                                    <input class="btn-check" type="radio" name="rating" id="rating-2" value="2" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="rating-2"><i class="fa fa-star"></i></label>
+
+                                                    <input class="btn-check" type="radio" name="rating" id="rating-1" value="1" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="rating-1"><i class="fa fa-star"></i></label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Upload Button -->
+                                        <div class="mb-3">
+                                            <label for="upload" class="form-label">Add Photos</label>
+                                            <input class="form-control" type="file" name="image[]" accept="image/*, application/pdf" id="upload" multiple>
+                                        </div>
+
+                                        <!-- Review Text Area -->
+                                        <div class="mb-3">
+                                            <label for="review-textarea" class="form-label">Review:</label>
+                                            <textarea class="form-control" name="content" id="review-textarea" cols="40" rows="3" required></textarea>
+                                        </div>
+
+                                        <!-- Submit Button -->
+                                        <button type="submit" name="submit_review" class="btn btn-primary">Submit Review</button>
+                                    </form>
+                                <?php else : ?>
+                                    <!-- Display when user is not logged in -->
+                                    <a href="#sign-in-dialog" class="btn btn-primary sign-in popup-with-zoom-anim"><i class="sl sl-icon-login"></i> Sign In</a>
+                                <?php endif; ?>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 col-lg-5">
+                        <aside class="sidebar-wrapper sidebar-sticky">
+                            <div class="sidebar-widget-wrapper mb-30">
+
+                                <div class="sidebar-widget widget">
+                                    <h6 class="sidebar-widget-title small mb-15"> Booking NOW !!!</h6>
+                                    <div class="sidebar-booking">
+                                        <form class="sidebar- booking-form" action="Booking_Store.php" method="post">
+                                            
+                                            <br>
+                                            <div class="banner-search-field has-separator d-flex align-items-center gap-10">
+                                                <div class="search-icon-bg">
+                                                    <span><i class="icon-cleander"></i></span>
+                                                </div>
+                                                <div class="banner-search-item">
+                                                    <input type="hidden" name="place_id" value="<?=$placeId?>">
+                                                    <div class="banner-form-input">
+                                                        <input name="start_date" class="form-control flatpickr-input" id="selectingMultipleDates" type="hidden" placeholder="Select Your date" readonly="readonly">
+                                                        <input name="end_date" class="form-control input" placeholder="Select Your date" tabindex="0" type="text" readonly="readonly">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="booking-btn">
+                                                <button type="submit" class="bd-btn btn-style radius-4 w-100">Send Now<span><i class="fa-regular fa-arrow-right"></i></span></button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                                <div class="sidebar-widget-divider"></div>
+
+                            </div>
+                            <div class="sidebar-widget-banner p-relative">
+                                <div class="sidebar-widget-thumb p-relative">
+                                    <img src="assets/images/bg/sidebar-img.png" alt="img">
+                                </div>
+                                <div class="sidebar-widget-content">
+                                    <span class="bd-play-btn pulse-white mb-40"><i class="icon-call-ring"></i></span>
+                                    <p class="b3 mb-0">Free Call</p>
+                                    <h5 class="mb-25"><a href="tel:+0290848020">02 (908) 480-20</a></h5>
+                                    <div class="sidebar-btn">
+                                        <a class="bd-text-btn style-two" href="blog-list-right.html">Contact
+                                            <span class="icon__box">
+                                                <i class="fa-light fa-angle-right icon__first"></i>
+                                                <i class="fa-light fa-angle-right icon__second"></i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- destinations-details area end -->
+
+    </main>
+    <!-- Body main wrapper end -->
 
 
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
-	(Load Extensions only on Local File Systems ! 
-	The following part can be removed on Server for On Demand Loading) -->
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/extensions/revolution.extension.video.min.js"></script>
+    <!-- Footer area start -->
 
+    <?php require_once 'components/footer.php'; ?>
+    <!-- Footer area end -->
 
+    <!-- back to top -->
+    <!-- Backtotop start -->
+    <div class="backtotop-wrap cursor-pointer">
+        <svg class="backtotop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Backtotop end -->
 
-
-    <!-- Style Switcher
-================================================== -->
-    <?php require_once 'components/color.php'; ?>
-    <!-- Style Switcher / End -->
-
-
+    <!-- JS here -->
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/waypoints.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/meanmenu.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/wow.js"></script>
+    <script src="assets/js/plugins/dropzone.min.js"></script>
+    <script src="assets/js/vendor/magnific-popup.min.js"></script>
+    <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/vendor/purecounter.js"></script>
+    <script src="assets/js/plugins/nouislider.min.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/plugins/cleave.min.js"></script>
+    <script src="assets/js/plugins/flatpickr.js"></script>
+    <script src="assets/js/plugins/tinymce.min.js"></script>
+    <script src="assets/js/vendor/ajax-form.js"></script>
+    <script src="assets/js/vendor/smooth-scroll.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 

@@ -18,4 +18,9 @@ class User extends Model {
     {
         return $this->hasMany(Place::class, 'id');
     }
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }
